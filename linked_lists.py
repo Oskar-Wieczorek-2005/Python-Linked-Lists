@@ -73,6 +73,16 @@ def bubble_sort_linked_list(linked_list):
             current = current.next
     return linked_list
 
+def test_bubble_sort_linked_list():
+    sll = SinglyLinkedList()
+    sll.insert(30)
+    sll.insert(10)
+    sll.insert(20)
+    print("Original list:")
+    sll.traverse()
+    sorted_sll = bubble_sort_linked_list(sll)
+    print("\nSorted list:")
+    sorted_sll.traverse()
 
 def test_singly_linked_list():
     sll = SinglyLinkedList()
@@ -91,7 +101,7 @@ def test_singly_linked_list():
 
 
 def main():
-    test_singly_linked_list()
+    test_bubble_sort_linked_list()
 
 if __name__ == "__main__":
     main()

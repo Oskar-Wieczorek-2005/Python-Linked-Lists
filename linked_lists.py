@@ -36,3 +36,9 @@ class SinglyLinkedList:
             prev = current
             current = current.next
         return False
+    
+    def traverse(self):
+        current = self.head
+        while current:
+            print(current.data)
+            current = current.next

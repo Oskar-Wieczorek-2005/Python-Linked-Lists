@@ -42,6 +42,17 @@ class SinglyLinkedList:
         while current:
             print(current.data)
             current = current.next
+    
+    def length(self):
+        count = 0
+        current = self.head
+        while current:
+            count += 1
+            current = current.next
+        return count
+    
+    def is_empty(self):
+        return self.head is None
 
 
 

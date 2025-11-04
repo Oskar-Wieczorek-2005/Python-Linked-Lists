@@ -55,15 +55,18 @@ class SinglyLinkedList:
         return self.head is None
 
 
+def test_singly_linked_list():
+    sll = SinglyLinkedList()
+    sll.insert(10)
+    sll.insert(20)
+    sll.insert(30)
+    print("Traversing the list:")
+    sll.traverse()
+    print("\nSearching for 20:", sll.search(20))
+    print("Searching for 40:", sll.search(40))
+    sll.delete(20)
+    print("\nTraversing the list after deleting 20:")
+    sll.traverse()
 
-sll = SinglyLinkedList()
-sll.insert(10)
-sll.insert(20)
-sll.insert(30)
-print("Traversing the list:")
-sll.traverse()
-print("\nSearching for 20:", sll.search(20))
-print("Searching for 40:", sll.search(40))
-sll.delete(20)
-print("\nTraversing the list after deleting 20:")
-sll.traverse()
+def main():
+    test_singly_linked_list()

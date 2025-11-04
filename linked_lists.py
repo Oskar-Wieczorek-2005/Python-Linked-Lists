@@ -16,3 +16,10 @@ class SinglyLinkedList:
             while current.next: # traverse to the last node
                 current = current.next
             current.next = new_node
+    def search(self, data):
+        current = self.head
+        while current:  # traverse and compare with the target data
+            if current.data == data:
+                return True
+            current = current.next
+        return False

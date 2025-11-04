@@ -23,3 +23,16 @@ class SinglyLinkedList:
                 return True
             current = current.next
         return False
+    def delete(self, data):
+        current = self.head
+        prev = None
+        while current:
+            if current.data == data:
+                if prev:  # Node to delete is not the head
+                    prev.next = current.next
+                else:  # Node to delete is the head
+                    self.head = current.next
+                return True
+            prev = current
+            current = current.next
+        return False

@@ -55,6 +55,25 @@ class SinglyLinkedList:
         return self.head is None
 
 
+
+
+def bubble_sort_linked_list(linked_list):
+    if linked_list.is_empty() or linked_list.head.next is None:
+        return linked_list  # Already sorted
+
+    swapped = True
+    while swapped:
+        swapped = False
+        current = linked_list.head
+        while current and current.next:
+            if current.data > current.next.data:
+                # Swap data
+                current.data, current.next.data = current.next.data, current.data
+                swapped = True
+            current = current.next
+    return linked_list
+
+
 def test_singly_linked_list():
     sll = SinglyLinkedList()
     sll.insert(10)
@@ -68,8 +87,11 @@ def test_singly_linked_list():
     print("\nTraversing the list after deleting 20:")
     sll.traverse()
 
+
+
+
 def main():
     test_singly_linked_list()
-    
+
 if __name__ == "__main__":
     main()
